@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <title>Ранняя оценка риска смертности при пневмониях различной этиологии</title> -->
+	<title>Расчет риска течения и исхода внебольничной пневмонии и Sars-Cov-2-инфекции</title>
+	<script type="text/javascript" src="pnevmorisk.js">
+	</script>
+</head>
+<body>
+	<!-- <h1 align="center">Ранняя оценка риска смертности при пневмониях различной этиологии</h1> -->
+	<h1 align="center">Расчет риска течения и исхода внебольничной пневмонии и Sars-Cov-2-инфекции</h1>
+	<hr />
+	<table align="center">
+		<tr>
+			<td align="center"><b>Параметр</b></td><td>&nbsp;</td>
+			<td align="center"><b>Значение</b></td><td>&nbsp;</td>
+			<td align="center"><b>Ед. изм.</b></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td colspan="5" align="left"><b>В начале заболевания:</b></td>
+		</tr>
+		<tr>
+			<td>СОЭ</td><td></td>
+			<td><input type="text" id="insoe" onkeydown="change1()" /></td><td></td>
+			<td>мм/час</td>
+		</tr>
+		<tr>
+			<td>СРБ</td><td></td>
+			<td><input type="text" id="insrb" onkeydown="change1()" /></td><td></td>
+			<td>мг/л</td>
+		</tr>
+		<tr>
+			<td>Лимфоциты</td><td></td>
+			<td><input type="text" id="inlym1" onkeydown="change1()" /></td><td></td>
+			<td><span style="color: blue; background-color: yellow">%</span></td>
+		</tr>
+		<tr>
+			<td>Нейтрофилы сегментоядерные</td><td></td>
+			<td><input type="text" id="inney1" onkeydown="change1()" /></td><td></td>
+			<td><span style="color: blue; background-color: yellow">%</span></td>
+		</tr>
+		<tr>
+			<td>Индекс Гаркави <span style="color: blue; background-color: yellow">(ЛИ)</span></td><td></td>
+			<td><input type="text" id="resg1" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><span style="color: gray; background-color: yellow">* для справки</span></td>
+		</tr>
+		<tr>
+			<td><button onclick="solve1()">Промежуточный исход &gt;&gt;</button></td><td></td>
+			<td><input type="text" id="result1" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td colspan="5" align="left"><b>Через 48-72 часа после начала заболевания:</b></td>
+		</tr>
+		<tr>
+			<td>Лимфоциты</td><td></td>
+			<td><input type="text" id="inlym2" onkeydown="change2()" /></td><td></td>
+			<td><span style="color: blue; background-color: yellow">%</span></td>
+		</tr>
+		<tr>
+			<td>Нейтрофилы сегментоядерные</td><td></td>
+			<td><input type="text" id="inney2" onkeydown="change2()" /></td><td></td>
+			<td><span style="color: blue; background-color: yellow">%</span></td>
+		</tr>
+		<tr>
+			<td>Индекс Гаркави <span style="color: blue; background-color: yellow">(ЛИ)</span></td><td></td>
+			<td><input type="text" id="resg2" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><span style="color: gray; background-color: yellow">* для справки</span></td>
+		</tr>
+<!--
+		<tr>
+			<td><button onclick="solve2()">Заключение &gt;&gt;</button></td><td></td>
+			<td><input type="text" id="result2" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td></td>
+		</tr>
+-->
+		<tr>
+			<td><button onclick="solve2()">Заключение &gt;&gt;</button></td><td></td>
+			<td><textarea id="result2" rows="1" style="background-color: #AAAAAA; overflow: hidden; resize: none; border: 2px solid #111; width: 169px;" readonly></textarea></td><td></td>
+			<td></td>
+		</tr>
+	</table>
+	<hr />
+	<p><button onclick="location.reload()">Сбросить</button></p>
+	<hr />
+	<p><strong>Разработали:</strong></p>
+	<span style="color: blue; background-color: yellow">
+	<ul>
+		<li>Арямкина Ольга Леонидовна – доктор медицинских наук, профессор, заведующая кафедрой внутренних болезней</li>
+		<li>Биек Альфред Юлаевич – ассистент кафедры внутренних болезней</li>
+		<li>Савш Павел Александрович – ассистент кафедры внутренних болезней</li>
+		<li>Гришмановский Павел Валерьевич – кандидат технических наук, доцент кафедры автоматики и компьютерных систем</li>
+		<li>Гришмановская Ольга Николаевна – старший преподаватель кафедры автоматики и компьютерных систем</li>
+	</ul>
+	</span>
+	<p><strong>&copy; Сургутский государственный университет, 2025</strong></p>
+</body>
+</html>
