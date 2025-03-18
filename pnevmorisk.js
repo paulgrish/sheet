@@ -30,10 +30,11 @@ function change1() {
 	r.style = "background-color: #AAAAAA;";
 	change2();
 }
+const tastyle = " font-family: inherit; overflow: hidden; resize: none; border: 1px solid #111; width: 169px;"
 function change2() {
 	var r = document.getElementById("result2");
 	r.value = "";
-	r.style = "background-color: #AAAAAA; overflow: hidden; resize: none; border: 2px solid #111;";
+	r.style = "background-color: #AAAAAA;";// + tastyle;
 	r.rows = 1;
 	r = document.getElementById("resg2");
 	r.value = "";
@@ -102,12 +103,12 @@ function solve2() {
 	var r2 = document.getElementById("result2");
 	if (pg2) {
 		r2.value = "Высокий риск смерти. Смена тактики лечения.";
-		r2.style = "background-color: #FFCCCC; font-family: inherit; overflow: hidden; resize: none; border: 2px solid #111;";
+		r2.style = "background-color: #FFCCCC;";// + tastyle;
 		r2.rows = 2;
 	}
 	else {
 		r2.value = "Низкий риск смерти. Продолжить лечение.";
-		r2.style = "background-color: #BBFFBB; font-family: inherit; overflow: hidden; resize: none; border: 2px solid #111;";
+		r2.style = "background-color: #BBFFBB;";// + tastyle;
 		r2.rows = 2;
 	}
 	return true;

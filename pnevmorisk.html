@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<!-- <title>Ранняя оценка риска смертности при пневмониях различной этиологии</title> -->
 	<title>Расчет риска течения и исхода внебольничной пневмонии и Sars-Cov-2-инфекции</title>
+	<style>textarea { font-family: inherit; font-size: 1em; overflow: hidden; resize: none; border: 1px solid #111; width: 169px; }</style>
 	<script type="text/javascript" src="pnevmorisk.js">
 	</script>
 </head>
@@ -35,17 +36,17 @@
 		<tr>
 			<td>Лимфоциты</td><td></td>
 			<td><input type="text" id="inlym1" onkeydown="change1()" /></td><td></td>
-			<td><span style="color: blue; background-color: yellow">%</span></td>
+			<td>%</td>
 		</tr>
 		<tr>
 			<td>Нейтрофилы сегментоядерные</td><td></td>
 			<td><input type="text" id="inney1" onkeydown="change1()" /></td><td></td>
-			<td><span style="color: blue; background-color: yellow">%</span></td>
+			<td>%</td>
 		</tr>
 		<tr>
-			<td>Индекс Гаркави <span style="color: blue; background-color: yellow">(ЛИ)</span></td><td></td>
+			<td>Индекс Гаркави (ЛИ, справочно)</td><td></td>
 			<td><input type="text" id="resg1" style="background-color: #AAAAAA;" readonly /></td><td></td>
-			<td><span style="color: gray; background-color: yellow">* для справки</span></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td><button onclick="solve1()">Промежуточный исход &gt;&gt;</button></td><td></td>
@@ -60,17 +61,17 @@
 		<tr>
 			<td>Лимфоциты</td><td></td>
 			<td><input type="text" id="inlym2" onkeydown="change2()" /></td><td></td>
-			<td><span style="color: blue; background-color: yellow">%</span></td>
+			<td>%</td>
 		</tr>
 		<tr>
 			<td>Нейтрофилы сегментоядерные</td><td></td>
 			<td><input type="text" id="inney2" onkeydown="change2()" /></td><td></td>
-			<td><span style="color: blue; background-color: yellow">%</span></td>
+			<td>%</td>
 		</tr>
 		<tr>
-			<td>Индекс Гаркави <span style="color: blue; background-color: yellow">(ЛИ)</span></td><td></td>
+			<td>Индекс Гаркави (ЛИ, справочно)</td><td></td>
 			<td><input type="text" id="resg2" style="background-color: #AAAAAA;" readonly /></td><td></td>
-			<td><span style="color: gray; background-color: yellow">* для справки</span></td>
+			<td></td>
 		</tr>
 <!--
 		<tr>
@@ -81,7 +82,7 @@
 -->
 		<tr>
 			<td><button onclick="solve2()">Заключение &gt;&gt;</button></td><td></td>
-			<td><textarea id="result2" rows="1" style="background-color: #AAAAAA; overflow: hidden; resize: none; border: 2px solid #111; width: 169px;" readonly></textarea></td><td></td>
+			<td><textarea id="result2" rows="1" style="background-color: #AAAAAA;" readonly></textarea></td><td></td>
 			<td></td>
 		</tr>
 	</table>
@@ -89,15 +90,14 @@
 	<p><button onclick="location.reload()">Сбросить</button></p>
 	<hr />
 	<p><strong>Разработали:</strong></p>
-	<span style="color: blue; background-color: yellow">
-	<ul>
+	<ul><span style="color: blue; background-color: yellow">
 		<li>Арямкина Ольга Леонидовна – доктор медицинских наук, профессор, заведующая кафедрой внутренних болезней</li>
 		<li>Биек Альфред Юлаевич – ассистент кафедры внутренних болезней</li>
 		<li>Савш Павел Александрович – ассистент кафедры внутренних болезней</li>
 		<li>Гришмановский Павел Валерьевич – кандидат технических наук, доцент кафедры автоматики и компьютерных систем</li>
 		<li>Гришмановская Ольга Николаевна – старший преподаватель кафедры автоматики и компьютерных систем</li>
-	</ul>
 	</span>
+	</ul>
 	<p><strong>&copy; Сургутский государственный университет, 2025</strong></p>
 </body>
 </html>
