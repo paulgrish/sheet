@@ -5,6 +5,9 @@
 	<!-- <title>Ранняя оценка риска смертности при пневмониях различной этиологии</title> -->
 	<title>Расчет риска течения и исхода внебольничной пневмонии и Sars-Cov-2-инфекции</title>
 	<style>textarea { font-family: inherit; font-size: 1em; overflow: hidden; resize: none; border: 1px solid #111; width: 169px; }</style>
+<!--
+	<style>textarea { font-family: inherit; overflow: hidden; resize: none; border: 1px solid #111; }</style>
+-->
 	<script type="text/javascript" src="pnevmorisk.js">
 	</script>
 </head>
@@ -25,32 +28,32 @@
 		</tr>
 		<tr>
 			<td>СОЭ</td><td></td>
-			<td><input type="text" id="insoe" onkeydown="change1()" /></td><td></td>
+			<td><textarea id="insoe" rows="1" onkeydown="change1()"></textarea></td><td></td>
 			<td>мм/час</td>
 		</tr>
 		<tr>
 			<td>СРБ</td><td></td>
-			<td><input type="text" id="insrb" onkeydown="change1()" /></td><td></td>
+			<td><textarea id="insrb" rows="1" onkeydown="change1()"></textarea></td><td></td>
 			<td>мг/л</td>
 		</tr>
 		<tr>
 			<td>Лимфоциты</td><td></td>
-			<td><input type="text" id="inlym1" onkeydown="change1()" /></td><td></td>
+			<td><textarea id="inlym1" rows="1" onkeydown="change1()"></textarea></td><td></td>
 			<td>%</td>
 		</tr>
 		<tr>
 			<td>Нейтрофилы сегментоядерные</td><td></td>
-			<td><input type="text" id="inney1" onkeydown="change1()" /></td><td></td>
+			<td><textarea id="inney1" rows="1" onkeydown="change1()"></textarea></td><td></td>
 			<td>%</td>
 		</tr>
 		<tr>
 			<td>Индекс Гаркави (ЛИ, справочно)</td><td></td>
-			<td><input type="text" id="resg1" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><textarea id="resg1" rows="1" style="background-color: #AAAAAA;" readonly></textarea></td><td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><button onclick="solve1()">Промежуточный исход &gt;&gt;</button></td><td></td>
-			<td><input type="text" id="result1" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><textarea id="result1" rows="1" style="background-color: #AAAAAA;" readonly></textarea></td><td></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -60,23 +63,23 @@
 		</tr>
 		<tr>
 			<td>Лимфоциты</td><td></td>
-			<td><input type="text" id="inlym2" onkeydown="change2()" /></td><td></td>
+			<td><textarea id="inlym2" rows="1" onkeydown="change2()"></textarea></td><td></td>
 			<td>%</td>
 		</tr>
 		<tr>
 			<td>Нейтрофилы сегментоядерные</td><td></td>
-			<td><input type="text" id="inney2" onkeydown="change2()" /></td><td></td>
+			<td><textarea id="inney2" rows="1" onkeydown="change2()"></textarea></td><td></td>
 			<td>%</td>
 		</tr>
 		<tr>
 			<td>Индекс Гаркави (ЛИ, справочно)</td><td></td>
-			<td><input type="text" id="resg2" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><textarea id="resg2" rows="1" style="background-color: #AAAAAA;" readonly></textarea></td><td></td>
 			<td></td>
 		</tr>
 <!--
 		<tr>
 			<td><button onclick="solve2()">Заключение &gt;&gt;</button></td><td></td>
-			<td><input type="text" id="result2" style="background-color: #AAAAAA;" readonly /></td><td></td>
+			<td><input type="text" id="result2" style="background-color: #AAAAAA;" readonly></textarea></td><td></td>
 			<td></td>
 		</tr>
 -->
@@ -90,13 +93,15 @@
 	<p><button onclick="location.reload()">Сбросить</button></p>
 	<hr />
 	<p><strong>Разработали:</strong></p>
-	<ul><span style="color: blue; background-color: yellow">
+	<ul>
 		<li>Арямкина Ольга Леонидовна – доктор медицинских наук, профессор, заведующая кафедрой внутренних болезней</li>
 		<li>Биек Альфред Юлаевич – ассистент кафедры внутренних болезней</li>
 		<li>Савш Павел Александрович – ассистент кафедры внутренних болезней</li>
+		<li>Гаран Галина Михайловна – аспирант кафедры внутренних болезней</li>
+		<li>Сундукова Галина Михайловна - аспирант кафедры внутренних болезней</li>
+		<li>Шаипов Марат Рустамович – <span style="color: blue; background-color: yellow">выпускник</span> БУ ХМАО-Югры «Сургутский государственный университет</li>
 		<li>Гришмановский Павел Валерьевич – кандидат технических наук, доцент кафедры автоматики и компьютерных систем</li>
 		<li>Гришмановская Ольга Николаевна – старший преподаватель кафедры автоматики и компьютерных систем</li>
-	</span>
 	</ul>
 	<p><strong>&copy; Сургутский государственный университет, 2025</strong></p>
 </body>
